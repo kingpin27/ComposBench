@@ -1,4 +1,4 @@
-# CIR Framework
+# ComposBench
 The all-in-one workbench for Composed Image Retrieval. Benchmark SOTA models, evaluate new methods, and visualize failure cases with an integrated UI.
 
 ## Features
