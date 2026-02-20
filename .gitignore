@@ -1,2 +1,6 @@
 .venv
 .env
+
+CIRCO
+
+clip_embeddings.parquet
