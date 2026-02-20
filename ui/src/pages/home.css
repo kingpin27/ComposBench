@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app-wrapper {
+  display: flex;
+  /* Optional: further alignment within the row */
+  justify-content: space-around; /* Distributes space between items */
+  align-items: center; /* Aligns items vertically in the center */
+  min-height: 100vh;
+  background-color: #f0f4f9; /* Matches the light grayish-blue background */
+  padding: 1em;
+}
+
+.search-side {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.results-side {
+  height: 100vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

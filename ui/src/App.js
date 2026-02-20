@@ -1,31 +1,15 @@
 import './App.css';
-import {useState, useEffect} from 'react'
+import Home from './pages/home'
+import {BrowserRouter, Route, Routes} from 'react-router'
 
 function App() {
-  const [imgUrl, setImgUrl] = useState("")
-  
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const val = await fetch('http://localhost:8000/val.json')
-                            .then(val => val.json())
-        const random = ~~(Math.random() * val.length)
-        const id = val[random]["reference_img_id"]
-        const length = String(id).length
-        const repeating_pattern = "0".repeat(12-length)
-        setImgUrl("http://localhost:8000/image/" + repeating_pattern + String(id) + ".jpg")
-      }
-      catch (err) {
-        console.error(err)
-      }
-    }
-    fetchData()
-  }, [])
   return (
-    <div className="App">
-      {imgUrl && <img src={imgUrl}/>}
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
